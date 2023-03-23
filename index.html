@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <title>BMI Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.9/justgage.min.js"></script>
+</head>
+<body>
+<!-- Header -->
+     <header>
+      <div class="header-image">
+        <a href="#" class="logo"><img src="logo.png" style="width: 90px; height: 70px;">
+      </div>
+    </a>
+      <ul>
+        <li style="list-style: none;" id="button" class="btn not-active"></li>
+        <li style="list-style: none;"> <a> <h2>Body Mass Index (BMI) Calculator </h2> </a></li>
+      </ul>
+    </header>
+    <main >
+      <br> <br> <br> <br>
+<!-- Input Table inc.(Gender, Weight, Age & Height) -->
+  <nav> 
+    <table border="0" cellspacing="15" width="98%"  onsubmit="validateForm(event)"> <br> <br> <br> 
+      <tr>
+        <form id="form" onsubmit="validateForm(event)">
+      <td>
+          <br> <br> <br> <img src="gender2.png"></a><br> <br> 
+          <h2>Gender </h2> <br> <br>
+          <div class="form-item">
+            <div class="form-gender">
+              <label class="gender">
+                <input type="radio" name="gender" value="male" id="gender-input" required>
+                <span class="male">Male</span>
+              </label><br>
+              <label class="gender">
+                <input type="radio" name="gender" value="female" id="gender-input" required>
+                <span class="female">Female</span>
+              </label>
+            </div>
+          </div>
+          <br> <br> Please Input Your Gender <br> <br>  
+        </td> 
+        <td> 
+            <img src="weight.png"></a><br> <br> 
+            <h2>Body Weight </h2> <br> <br>
+            <label for="weight-input" id="wlabel">Your Weight(kg):</label><input type="text" id="weight-input" required> 
+            <br> <br> Please Input Your Weight <br> <br>  </td>
+        <td> 
+            <img src="age.png"></a><br> <br> 
+            <h2>Age </h2> <br> <br> 
+            <label for="age-input" id="alabel">Your Age(Y.O):</label><input type="text" id="age-input" required>
+            <br> <br> Please Input Your Age <br> <br> </td>
+            <td> 
+            <br> <br> <br><img src="height.png"></a> <br> <br> 
+            <h2>Body Height </h2> <br> <br>
+            <label for="height-input" id="hlabel">Your Height(cm):</label><input type="text" id="height-input" required>
+            <br> <br> Please Input Your Weight <br> <br> 
+            <button> <a id="btn" class="buttons" onclick="scrollDown()"> Calculate </a></button> </td>
+            </form>
+      </tr>
+    </table>
+  </nav>
+<!-- Result BMI -->
+<hasil>
+  <br> <br> 
+    <h1>  The result of your BMI is </h1>
+    <table border="0" cellspacing="15" width="100%">
+        <tr> 
+            <td style="width: 35%;">
+              <h4>BMI Classification Table </h4>
+              <img src="tabel.png"></td>
+            <td> 
+              <h2>Your Body Mass Index Is : </h2> <br> <br>
+              <div id="gauge"><br> <br> 
+                <label for="bmiCategory" id="bmiCategory">Your BMI category is : </label>
+                <span for="bmiCategory" id="bmiCategory"></span>
+            </td>
+        </tr>
+    </table>
+  </hasil>
+  </main> <br>
+<!-- Footer -->
+<footer align="center"> <h4>Copyright © BMI Calculator - 2023. All rights reserved</h4></a></footer>
+<!-- Script -->
+<script src = "index.js"> </script>
+</body>
+</html>
+
